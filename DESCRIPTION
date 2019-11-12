@@ -4,7 +4,7 @@ Title: Coerce any R object to a timeSeries class
 Version: 0.1.0
 Author: Bernardo Reckziegel
 Maintainer: Bernardo Reckziegel <bernardo_cse@hotmail.com>
-Description: Makes it easier to migrate between the R-Mertrics and the tidyverse environments.
+Description: Makes it easier to migrate among the R-Mertrics and the tidyverse environments.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -21,4 +21,4 @@ Imports:
 RoxygenNote: 6.1.1
 Suggests: 
     testthat (>= 2.1.0),
-    covr
+    covr (>= 3.3.2)

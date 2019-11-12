@@ -4,7 +4,7 @@ library(astimeseries)
 
 test_timeseries <- as_timeseries(AirPassengers)
 
-test_that("coercion from matrix to timeSeries works", {
+test_that("coercion from ts to timeSeries works", {
 
   # ts
   expect_equal(length(AirPassengers), 144)
