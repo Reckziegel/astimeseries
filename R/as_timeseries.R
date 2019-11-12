@@ -3,7 +3,7 @@
 #' @param .data The data to be coerced
 #' @param .select Select the columns to be included in the timeSeries object. Valid only for data.frames and tibbles. If \code{NULL} (the default) all the numeric columns will be used.
 #' @param .date_var Inform the date column. Valid for data.frames and tibbles only. If \code{NULL} the function will do it's best to find the date column.
-#' @param .silent Should warnings messages be omited? The default is \code{TRUE}.
+#' @param .silent Should warnings messages be omitted? The default is \code{TRUE}.
 #' @param ... Addicional parameters to be passed into a \code{timeSeries} class.
 #'
 #' @importFrom magrittr "%>%"
@@ -133,19 +133,19 @@ as_timeseries_.data.frame <- function(.data, .select = NULL, .date_var = NULL, .
 
 # tsibble -----------------------------------------------------------------
 
-#' #' @rdname as_timeseries
-#' #' @export
-#' as_time_series_.tbl_ts <- function(.data, .select = NULL, .date_var = NULL, .silent = TRUE, ...) {
-#'
-#'   .data <- tibble::as_tibble(.data)
-#'
-#'   as_timeseries_.data.frame(.data     = .data,
-#'                             .select   = .select,
-#'                             .date_var = .date_var,
-#'                             .silent   = .silent,
-#'                             ...)
-#'
-#' }
+# #' @rdname as_timeseries
+# #' @export
+# as_time_series_.tbl_ts <- function(.data, .select = NULL, .date_var = NULL, .silent = TRUE, ...) {
+#
+#   .data <- tibble::as_tibble(.data)
+#
+#   as_timeseries_.data.frame(.data     = .data,
+#                             .select   = .select,
+#                             .date_var = .date_var,
+#                             .silent   = .silent,
+#                             ...)
+#
+# }
 
 
 # matrix ------------------------------------------------------------------

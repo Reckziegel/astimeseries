@@ -46,7 +46,7 @@ as_timeseries_(.data, .select = NULL, .date_var = NULL,
 
 \item{.date_var}{Inform the date column. Valid for data.frames and tibbles only. If \code{NULL} the function will do it's best to find the date column.}
 
-\item{.silent}{Should warnings messages be omited? The default is \code{TRUE}.}
+\item{.silent}{Should warnings messages be omitted? The default is \code{TRUE}.}
 
 \item{...}{Addicional parameters to be passed into a \code{timeSeries} class.}
 }
@@ -54,7 +54,7 @@ as_timeseries_(.data, .select = NULL, .date_var = NULL,
 A timeSeries object.
 }
 \description{
-.data <- tibble::as_tibble(.data)
+Coerce any data structure to timeSeries class
 }
 \examples{
 

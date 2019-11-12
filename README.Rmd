@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+devtools::load_all(".")
+```
+
+# astimeseries
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/Reckziegel/astimeseries.svg?branch=master)](https://travis-ci.org/Reckziegel/astimeseries)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/Reckziegel/astimeseries?branch=master&svg=true)](https://ci.appveyor.com/project/Reckziegel/astimeseries)
+[![Codecov test coverage](https://codecov.io/gh/Reckziegel/astimeseries/branch/master/graph/badge.svg)](https://codecov.io/gh/Reckziegel/astimeseries?branch=master)
+<!-- badges: end -->
+
+The objective of `astimeseries` is to simplify and assure the correct coercion among data structures used in the `tidyverse` to R-Mertrics (`timeSeries` class). 
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+install.packages("devtools")
+devtools::install_github("Reckziegel/astimeseries")
+```
+## Example
+
+Suppose you have the following `tibble`:
+
+```{r example}
+
+library(tibble)
+
+tbl <- tibble(date = as.Date(c('2019-01-01', '2019-01-02', '2019-01-03')),
+               a    = rnorm(3),
+               b    = rnorm(3),
+               c    = rnorm(3))
+
+tbl
+
+```
+
+If you try to coerce the `tbl` object to a `timeSeries` (the data structure R-Metrics likes to work with), the timestamps attributes are lost:
+
+```{r}
+
+library(timeSeries)
+
+as.timeSeries(tbl)
+```
+
+Instead, it's safer to use `as_timeseries` to ensure all information is keeped approprietly. 
+
+```{r}
+# library(astimeseries)
+as_timeseries(tbl)
+```
+
